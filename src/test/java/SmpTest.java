@@ -53,6 +53,7 @@ public class SmpTest
         // Проверки
         WebElement element = driver.findElement(By.xpath("//a[@id='gwt-debug-title']"));
         String textElement = element.getText();
+        String msg = String.format("Название объекта не совпало. Ожидалось: %s, Получили: %s", "employee1 \"Федянин Михаил\"/Карточка сотрудника", textElement);
         Assertions.assertEquals("employee1 \"Федянин Михаил\"/Карточка сотрудника", textElement);
 
         // Очистка
